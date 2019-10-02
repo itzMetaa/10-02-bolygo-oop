@@ -13,9 +13,25 @@ public enum Bolygo {
     
     private double tomeg;
     private double sugar;
+    private final double G = 6.67433e-11;
     
     private Bolygo(double tomeg, double sugar){
         this.tomeg = tomeg;
         this.sugar = sugar;
+    }
+    
+    public double getTomeg(){
+        return this.tomeg;
+    }
+    public double getSugar(){
+        return this.sugar;
+    }
+    
+    public double getGravitacio(){
+        return this.G * this.tomeg / Math.pow(this.sugar, 2);
+    }
+    
+    public double getSuly(double tomeg){
+        return tomeg*this.getGravitacio();
     }
 }
