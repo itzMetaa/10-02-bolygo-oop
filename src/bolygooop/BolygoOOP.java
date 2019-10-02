@@ -6,6 +6,12 @@ public class BolygoOOP {
         Bolygo fold = Bolygo.FOLD;
         Bolygo b = Bolygo.NEPTUNUSZ;
         
+        Bolygo[] bolygok = Bolygo.values();
+        
+        for (Bolygo bolygocska : bolygok) {
+            System.out.println(bolygocska.name());
+        }
+        
     }
     
 }
